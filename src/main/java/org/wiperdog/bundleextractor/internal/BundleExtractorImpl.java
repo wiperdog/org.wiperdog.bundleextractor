@@ -52,6 +52,7 @@ public class BundleExtractorImpl implements BundleExtractor {
 	}
 
 	public String processResource(Map bundle) {
+		try{
 		boolean getit = (Boolean) bundle.get("getit");
 		if(getit){			
 			String groupId = (String) bundle.get("groupId");
@@ -85,6 +86,10 @@ public class BundleExtractorImpl implements BundleExtractor {
 			}
 		}
 		return null;
+		}catch(Exception ex){
+			ex.printStackTrace();
+			return null;
+		}
 	}
 	
 	public void extractPackage(File packageBundle){
@@ -107,14 +112,16 @@ public class BundleExtractorImpl implements BundleExtractor {
 				JarEntry entry = (JarEntry) entries.nextElement();
 				File f = new File(System.getProperty("felix.home") + File.separator + destination + File.separator + entry.getName());
 				
-				if(entry.isDirectory() && !entry.getName().equalsIgnoreCase("META-INF/") ){
+				if(entry.getName().contains("manifest.mf") || entry.getName().contains("META-INF/")){
+					System.out.println("Abort: " + f.getName());
+					continue;
+				}
+				if(entry.isDirectory()){
 					f.mkdir();
 					continue;
 				}
 				
-				if(f.getName().equalsIgnoreCase("manifest.mf") || f.getName().equalsIgnoreCase("META-INF")){
-					continue;
-				}
+				
 				System.out.println("-Extract " + entry.getName());
 				InputStream is = jar.getInputStream(entry);
 				FileOutputStream fos = new FileOutputStream(f);
