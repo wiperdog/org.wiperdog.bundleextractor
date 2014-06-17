@@ -7,7 +7,7 @@
   </properties>
   
   <groupId>org.wiperdog</groupId>
-  <artifactId>bundleextractor</artifactId>
+  <artifactId>org.wiperdog.bundleextractor</artifactId>
   <packaging>bundle</packaging>
   <version>1.0</version>
   <dependencies>
