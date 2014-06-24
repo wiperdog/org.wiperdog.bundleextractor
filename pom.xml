@@ -5,11 +5,29 @@
   	<bundle.symbolicName>org.wiperdog.bundleextractor</bundle.symbolicName>
   	<bundle.namespace>org.wiperdog.bundleextractor</bundle.namespace>
   </properties>
+  <parent>
+        <artifactId>wiperdog-parent</artifactId>
+        <groupId>org.wiperdog</groupId>
+        <version>0.1.0</version>
+  </parent>
   
   <groupId>org.wiperdog</groupId>
   <artifactId>org.wiperdog.bundleextractor</artifactId>
   <packaging>bundle</packaging>
-  <version>1.0</version>
+  <version>0.1.0</version>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>scm:git:https://github.com/wiperdog/org.wiperdog.bundleextractor.git</url>
+    <connection>scm:git:https://github.com/wiperdog/org.wiperdog.bundleextractor.git</connection>
+    <developerConnection>scm:git:https://github.com/wiperdog/org.wiperdog.bundleextractor.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
   <dependencies>
   	<dependency>
   		<groupId>org.osgi</groupId>
