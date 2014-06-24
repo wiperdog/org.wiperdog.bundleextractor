@@ -14,7 +14,7 @@
   <groupId>org.wiperdog</groupId>
   <artifactId>org.wiperdog.bundleextractor</artifactId>
   <packaging>bundle</packaging>
-  <version>0.1.0</version>
+  <version>0.1.0-SNAPSHOT</version>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
