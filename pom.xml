@@ -14,7 +14,7 @@
   <groupId>org.wiperdog</groupId>
   <artifactId>org.wiperdog.bundleextractor</artifactId>
   <packaging>bundle</packaging>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -26,7 +26,7 @@
     <url>scm:git:https://github.com/wiperdog/org.wiperdog.bundleextractor.git</url>
     <connection>scm:git:https://github.com/wiperdog/org.wiperdog.bundleextractor.git</connection>
     <developerConnection>scm:git:https://github.com/wiperdog/org.wiperdog.bundleextractor.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v0.1.0</tag>
   </scm>
   <dependencies>
   	<dependency>
